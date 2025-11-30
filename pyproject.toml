@@ -1,17 +1,29 @@
 [project]
-name = "erm"
+name = "erm-sustainability-agent"
 version = "0.1.0"
-description = ""
+description = "GenAI Assistant for EIA Consulting Workflows"
 authors = [
-    {name = "Meghana Patakota",email = "megpatakota@gmail.com"}
+    {name = "Meghana Patakota", email = "megpatakota@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "3.10.16"
 dependencies = [
-    "openai (>=2.8.1,<3.0.0)"
+    "openai>=1.40.0",
+    "pymupdf (>=1.26.6,<2.0.0)",
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipykernel (>=7.1.0,<8.0.0)",
+    "openai-agents (>=0.6.1,<0.7.0)",
+    "faiss-cpu (>=1.13.0,<2.0.0)",
+    "numpy (<2.0.0)",
+    "fastembed (>=0.7.3,<0.8.0)",
+    "rich (>=13.0.0,<14.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "streamlit (>=1.51.0,<2.0.0)",
 ]
 
-
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false

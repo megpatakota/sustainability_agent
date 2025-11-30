@@ -1,0 +1,7 @@
+[server]
+maxUploadSize = 1000
+
+[global]
+# Improves startup time by preventing warnings
+developmentMode = false
+
