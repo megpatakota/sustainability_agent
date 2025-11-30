@@ -2,6 +2,25 @@
 
 An AI-powered document research and analysis tool that allows you to upload PDF documents and interact with them through a conversational interface. The system uses semantic search and AI agents to research documents and generate comprehensive reports.
 
+## Problem Statement
+
+Consulting workflows often require analyzing large, complex documents (such as Environmental Impact Assessment reports) that can span thousands of pages. Traditional keyword search and manual review are time-consuming and may miss relevant information scattered across different sections.
+
+**The Challenge:**
+- Consultants need to quickly find relevant information in large PDF documents
+- Information may be spread across multiple sections and pages
+- Manual review is slow and error-prone
+- Synthesizing findings into reports requires significant time and effort
+
+**The Solution:**
+This Research Agent automates the document research and synthesis process by:
+- Using semantic search to find relevant information based on meaning, not just keywords
+- Leveraging AI agents to perform comprehensive research across the entire document
+- Automatically generating structured reports with citations
+- Providing an intuitive chat interface for natural language queries
+
+This solution was developed as a proof-of-concept for automating consulting workflows, specifically targeting EIA document analysis where consultants need to quickly identify risks, mitigation strategies, and compliance requirements.
+
 ## Overview
 
 This application provides a Streamlit-based web interface for document analysis. Upload a PDF, and the system will:
@@ -36,7 +55,11 @@ The system follows a two-phase architecture:
 3. **Report Drafting Agent**: Synthesizes research findings into comprehensive reports
 4. **Streamlit Interface**: Displays results to the user
 
-See `ERM_architecture.png` for a detailed architecture diagram.
+### Architecture Diagram
+
+![Architecture Diagram](architecture_diagram.png)
+
+The diagram above illustrates the complete workflow from document upload through report generation, showing how the system processes documents, caches embeddings, and uses AI agents to research and synthesize information.
 
 ## Installation
 
@@ -49,7 +72,7 @@ See `ERM_architecture.png` for a detailed architecture diagram.
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/megpatakota/sustainability_agent.git
    cd sustainability_agent
    ```
 
@@ -146,7 +169,7 @@ sustainability_agent/
 ├── data/
 │   ├── embeddings_cache/   # Cached embeddings (by file hash)
 │   └── ...                 # Other data files
-├── ERM_architecture.png    # Architecture diagram
+├── architecture_diagram.png    # Architecture diagram
 ├── .env                    # Environment variables (not in git)
 └── README.md               # This file
 ```
@@ -199,14 +222,6 @@ For very large documents:
 - Consider processing on a machine with more RAM
 - The embedding cache helps reduce processing time for repeated uploads
 
-## License
-
-[Add your license here]
-
 ## Author
 
 Meghana Patakota (megpatakota@gmail.com)
-
-## Contributing
-
-[Add contribution guidelines if applicable]
